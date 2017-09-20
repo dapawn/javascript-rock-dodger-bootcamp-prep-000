@@ -98,8 +98,8 @@ function endGame() {
   for (i in ROCKS) {
     ROCKS[i].remove()
   }
-  //window.removeEventListener('keydown', function (e) {moveDodger(e)})
-  window.removeEventListener('keydown', moveDodger(e))
+  window.removeEventListener('keydown', function (e) {moveDodger(e)})
+  window.removeEventListener('keydown', moveDodger)
   alert(`YOU LOSE!`);
 }
 
@@ -176,8 +176,7 @@ function positionToInteger(p) {
 
 function start() {
   //alert(`We are in start`)
-  //window.addEventListener('keydown', function (e) {moveDodger(e)})
-  window.addEventListener('keydown', moveDodger(e))
+  window.addEventListener('keydown', function (e) {moveDodger(e)})
 
   START.style.display = 'none'
 
