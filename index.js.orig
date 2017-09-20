@@ -93,14 +93,14 @@ function createRock(x) {
  * Finally, alert "YOU LOSE!" to the player.
  */
 function endGame() {
-  alert(`YOU LOSE!`);
   //location.reload();
   clearInterval(gameInterval);
   for (i in ROCKS) {
     ROCKS[i].remove()
   }
-  GAME.removeChild(moveDodger)
-  }
+  window.removeEventListener('keydown', function (e) {moveDodger(e)})
+  alert(`YOU LOSE!`);
+}
 
 function moveDodger(e) {
   // implement me!
