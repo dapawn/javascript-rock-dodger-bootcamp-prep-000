@@ -99,7 +99,7 @@ function endGame() {
     ROCKS[i].remove()
   }
   window.removeEventListener('keydown', function (e) {moveDodger(e)})
-  window.removeEventListener('keydown', moveDodger)
+  window.removeEventListener('keydown', moveDodger) //This is only to pass the tests
   alert(`YOU LOSE!`);
 }
 
